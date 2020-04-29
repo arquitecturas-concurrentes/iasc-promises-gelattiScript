@@ -7,7 +7,7 @@ const confirmarGusto = () => document.querySelector('#button-product-add-by-stor
 
 const secuenciarConDelay = (accion1, accion2, delay = 1000) => {
     accion1();
-    setTimeout(accion2, delay);
+    setTimeout(() => accion2(), delay);
 };
 
 secuenciarConDelay(

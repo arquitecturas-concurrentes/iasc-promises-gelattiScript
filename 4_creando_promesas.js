@@ -1,14 +1,20 @@
-// Promesa que solo hace una acción. Nunca se resuelve
-let promesaSinResolver = new Promise(() => console.log('¡Hola!'));
+//TODO arrancar mostrando una Promise que se obtiene al interactuar con alguna API?
+//Usar ejemplo que no te fuerce a encadenar `thens` para obtener la respuesta (fetch no, por ejemplo)
 
-// Promesa que se resuelve inmediatamente
-new Promise(resolve => resolve(15));
-
+// Promesa que se crea con un valor (se resuelve inmediatamente)
 Promise.resolve(15);
 
+// Otra forma de crear esa misma promesa (constructor con callback)
+new Promise(resolve => resolve(15));
+
+// Promesa que sólo hace una acción. Nunca se resuelve (queda en estado `pendiente`)
+let promesaSinResolver = new Promise((resolve) => {
+    console.log('¡Hola!');
+});
+
 // Promesa que se resuelve después de unos segundos
-let promesaConTimeout = new Promise((resolve) =>
-    setTimeout(() => resolve("Vengo del pasado"), 10_000)
-);
+let promesaConTimeout = new Promise((resolve) => {
+    setTimeout(() => resolve("Vengo del pasado"), 1_000);
+});
 
 console.log(promesaConTimeout);

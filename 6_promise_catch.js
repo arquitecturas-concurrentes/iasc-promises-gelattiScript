@@ -23,3 +23,7 @@ let inversa = (numero) => {
 inversa(5)
     .then(resultado => console.log("La inversa es: " + resultado))
     .catch(error => console.error(error.message));
+
+inversa(0)
+    .then(resultado => console.log("La inversa es: " + resultado))
+    .catch(error => console.error(error.message));
