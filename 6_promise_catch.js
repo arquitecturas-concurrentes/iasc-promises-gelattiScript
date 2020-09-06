@@ -1,6 +1,6 @@
 // Promesa que puede resolverse o fallar
 let inversa = (numero) => {
-    return new Promise((resolve, reject) =>{
+    return new Promise((resolve, reject) => {
         if (numero === 0) {
             const error = new Error("No existe la inversa de 0");
             reject(error);

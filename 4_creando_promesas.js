@@ -1,11 +1,8 @@
-//TODO arrancar mostrando una Promise que se obtiene al interactuar con alguna API?
-//Usar ejemplo que no te fuerce a encadenar `thens` para obtener la respuesta (fetch no, por ejemplo)
-
-// Promesa que se crea con un valor (se resuelve inmediatamente)
-Promise.resolve(15);
-
-// Otra forma de crear esa misma promesa (constructor con callback)
+// Creamos una Promesa que se resuelve inmediatamente con un valor
 new Promise(resolve => resolve(15));
+
+// Otra forma de crear una promesa ya resuelta
+Promise.resolve(15);
 
 // Promesa que sólo hace una acción. Nunca se resuelve (queda en estado `pendiente`)
 let promesaSinResolver = new Promise((resolve) => {
