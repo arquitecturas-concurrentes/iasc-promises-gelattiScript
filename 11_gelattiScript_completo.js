@@ -1,9 +1,10 @@
-const gustos = () => Array.from(document.querySelectorAll('div.input-radio > app-product-topping-item'));
+const saborSelector = 'div.input-radio > app-product-topping-item > div.topping-restaurant';
+const gustos = () => Array.from(document.querySelectorAll(saborSelector));
 const encontrarGusto = (nombre) => gustos().find(unGusto => unGusto.innerText.includes(nombre));
 
 const seleccionarCuartoDeHelado = () => ({
-    accion: () => document.querySelectorAll('#category-products-60277')[3].click(),
-    condicionFin: () => !!document.querySelector('div.input-radio > app-product-topping-item')
+    accion: () => document.querySelectorAll('#category-products-60277')[2].click(),
+    condicionFin: () => !!document.querySelector(saborSelector)
 });
 const elegirGusto = (gusto) => ({
     accion: () => {
@@ -17,7 +18,7 @@ const elegirGusto = (gusto) => ({
 });
 const confirmarGusto = () => ({
     accion: () => document.querySelector('#button-product-add-by-store').click(),
-    condicionFin: () => !document.querySelector('div.input-radio > app-product-topping-item')
+    condicionFin: () => !!document.querySelector(saborSelector)
 });
 
 const wait = (condicion) => {
@@ -41,12 +42,6 @@ const pipeline = (commands) => commands.reduce((acum, command) => acum.then(() =
 
 pipeline([
     seleccionarCuartoDeHelado(),
-    elegirGusto('Lemon Pie'),
-    elegirGusto('Chocolate Cacao 80%'),
-    confirmarGusto(),
-
-    seleccionarCuartoDeHelado(),
-    elegirGusto('Sambayón'),
-    elegirGusto('Dulce de Leche Clásico'),
+    elegirGusto('DDL de Cabra'),
     confirmarGusto(),
 ]);

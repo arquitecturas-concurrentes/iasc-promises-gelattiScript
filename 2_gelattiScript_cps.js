@@ -1,7 +1,7 @@
-const gustos = () => Array.from(document.querySelectorAll('div.input-radio > app-product-topping-item'));
+const gustos = () => Array.from(document.querySelectorAll('div.input-radio > app-product-topping-item > div.topping-restaurant'));
 const encontrarGusto = (nombre) => gustos().find(unGusto => unGusto.innerText.includes(nombre));
 
-const seleccionarCuartoDeHelado = () => document.querySelectorAll('#category-products-60277')[3].click();
+const seleccionarCuartoDeHelado = () => document.querySelectorAll('#category-products-60277')[2].click();
 const elegirGusto = (gusto) => {
     const gustoBuscado = encontrarGusto(gusto);
     if(!gustoBuscado) {
@@ -19,7 +19,7 @@ const secuenciarConDelay = (accion1, accion2, delay = 1000) => {
 secuenciarConDelay(
     () => seleccionarCuartoDeHelado(),
     () => secuenciarConDelay(
-        () => elegirGusto('Lemon Pie'),
+        () => elegirGusto('DDL de Cabra'),
         () => secuenciarConDelay(
             () => elegirGusto('Chocolate Cacao 80%'),
             () => secuenciarConDelay(
