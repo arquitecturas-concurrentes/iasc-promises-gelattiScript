@@ -1,8 +1,8 @@
 // Creamos una Promesa que se resuelve inmediatamente con un valor
-new Promise(resolve => resolve(15));
+let promesa = new Promise(resolve => resolve(15));
 
 // Otra forma de crear una promesa ya resuelta
-Promise.resolve(15);
+let promesaResuelta = Promise.resolve(15);
 
 // Promesa que sólo hace una acción. Nunca se resuelve (queda en estado `pendiente`)
 let promesaSinResolver = new Promise((resolve) => {
