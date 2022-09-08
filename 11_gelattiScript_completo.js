@@ -1,9 +1,10 @@
-const saborSelector = 'div.input-radio > app-product-topping-item > div.topping-restaurant';
+const saborSelector = '[data-qa="topping-item"]';
 const gustos = () => Array.from(document.querySelectorAll(saborSelector));
 const encontrarGusto = (nombre) => gustos().find(unGusto => unGusto.innerText.includes(nombre));
 
+const cuartoDeHeldoSelector = '[data-qa="product-item-187674_986649"]';
 const seleccionarCuartoDeHelado = () => ({
-    accion: () => document.querySelectorAll('#category-products-60277')[2].click(),
+    accion: () => document.querySelectorAll(cuartoDeHeldoSelector)[1].click(),
     condicionFin: () => !!document.querySelector(saborSelector)
 });
 const elegirGusto = (gusto) => ({
@@ -12,13 +13,13 @@ const elegirGusto = (gusto) => ({
         if(!gustoBuscado) {
             throw new Error(`No encontré el gusto '${gusto}'`);
         }
-        gustoBuscado.getElementsByTagName("button")[1].click();
+        gustoBuscado.getElementsByTagName("svg")[0].dispatchEvent(new CustomEvent('click', {bubbles: true}));
     },
-    condicionFin: () => !!encontrarGusto(gusto).querySelector('.active')
+    condicionFin: () => !!(encontrarGusto(gusto).getElementsByTagName('svg').length == 1)
 });
 const confirmarGusto = () => ({
-    accion: () => document.querySelector('#button-product-add-by-store').click(),
-    condicionFin: () => !!document.querySelector(saborSelector)
+    accion: () => document.querySelector('[data-qa="secondary-button"]').dispatchEvent(new CustomEvent('click', {bubbles: true})),
+    condicionFin: () => !!document.querySelector(cuartoDeHeldoSelector)
 });
 
 const wait = (condicion) => {

@@ -1,10 +1,9 @@
-const saborSelector = `div[data-testid='tooping']`;
+const saborSelector = `[data-qa="topping-item"]`;
 const gustos = () => Array.from(document.querySelectorAll(saborSelector));
 const encontrarGusto = (nombre) => gustos().find(unGusto => unGusto.innerText.includes(nombre));
 
-const opcionCuartoDeHelado = Array.from(document.querySelectorAll('div'))
-    .find(el => Array.from(el.childNodes).some(child => child.textContent === '1/4 kg de Helado'));
-const seleccionarCuartoDeHelado = () => opcionCuartoDeHelado.querySelector('button').click();
+const seleccionarCuartoDeHelado = () => document.querySelectorAll('[data-qa="product-item-187674_986649"]')[1].click();
+
 const elegirGusto = (gusto) => {
     const gustoBuscado = encontrarGusto(gusto);
     if(!gustoBuscado) {
