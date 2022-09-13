@@ -1,4 +1,4 @@
-let promesaConTimeout = new Promise((resolve) => {
+promesaConTimeout = new Promise((resolve) => {
     setTimeout(() => resolve("Vengo del pasado"), 10_000);
 });
 
