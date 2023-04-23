@@ -43,6 +43,6 @@ const pipeline = (commands) => commands.reduce((acum, command) => acum.then(() =
 
 pipeline([
     seleccionarCuartoDeHelado(),
-    elegirGusto('DDL de Cabra'),
+    elegirGusto('DDL de Leche de Cabra'),
     confirmarGusto(),
 ]);
