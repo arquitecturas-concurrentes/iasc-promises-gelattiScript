@@ -1,6 +1,7 @@
+const rango = (startAt, size) => Array.from({length: size}, (x, i) => i + startAt);
 const fetchJSON = (request) => fetch(request).then(response => response.json());
 
-const unoA150 = Array.from({length: 150}, (x, i) => i+1);
+const unoA150 = rango(1, 150);
 
 // Podemos disparar varios requests concurrentes, y después combinar todos los resultados en una lista
 let promesasDePokemons =

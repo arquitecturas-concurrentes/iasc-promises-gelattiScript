@@ -5,5 +5,4 @@ Material para clase de Promises, usando como ejemplo un script para hacer pedido
 ### Instrucciones para correr el gelatti-script
 - Ir a https://www.rappi.com.ar/restaurantes/rapanui
 - Abrir DevTools con `F12`
-- Copiar el contenido de `ejecutar_js.js` en la consola de las DevTools y presionar `Enter`
-- En el pop-up que aparece, copiar el código del gelatti-script y clickear `OK`
+- Copiar el código del gelatti-script en la consola del navegador y ejecutar
