@@ -21,6 +21,6 @@ pipeline([
     () => confirmarGusto(),
     () => seleccionarCuartoDeHelado(),
     () => elegirGusto('Sambayón'),
-    () => elegirGusto('Dulce de Leche Clásico'),
+    () => elegirGusto('DDL clásico'),
     () => confirmarGusto(),
 ]);

@@ -13,5 +13,5 @@ accionConDelay(() => seleccionarCuartoDeHelado())
     .then(() => accionConDelay(() => confirmarGusto()))
     .then(() => accionConDelay(() => seleccionarCuartoDeHelado()))
     .then(() => accionConDelay(() => elegirGusto('Sambayón')))
-    .then(() => accionConDelay(() => elegirGusto('Dulce de Leche Clásico')))
+    .then(() => accionConDelay(() => elegirGusto('DDL clásico')))
     .then(() => accionConDelay(() => confirmarGusto()));

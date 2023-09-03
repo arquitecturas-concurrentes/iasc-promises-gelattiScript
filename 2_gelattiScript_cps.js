@@ -18,7 +18,7 @@ secuenciarConDelay(
                     () => secuenciarConDelay(
                         () => elegirGusto('Sambayón'),
                         () => secuenciarConDelay(
-                            () => elegirGusto('Dulce de Leche Clásico'),
+                            () => elegirGusto('DDL clásico'),
                             () => confirmarGusto()
                         )
                     )
