@@ -7,7 +7,7 @@ const unoA150 = rango(1, 150);
 let promesasDePokemons =
     unoA150.map(n => fetchJSON('https://pokeapi.co/api/v2/pokemon/' + n));
 Promise.all(promesasDePokemons)
-    .then(personajes => personajes.map(personaje => personaje.name).sort())
+    .then(pokemones => pokemones.map(pokemon => pokemon.name).sort())
     .then(nombres => nombres.forEach(nombre => console.log(nombre)));
 // Con `Promise.all` pasamos de [Promise<Pokemon>] a Promise<Pokemon[]>
 
