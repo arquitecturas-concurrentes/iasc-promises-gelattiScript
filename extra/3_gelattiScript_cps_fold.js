@@ -1,4 +1,4 @@
-import {confirmarGusto, elegirGusto, seleccionarCuartoDeHelado} from "./0_rapanui_rappi_crawler";
+import {confirmarGusto, elegirGusto, seleccionarCuartoDeHelado} from "../0_rapanui_rappi_crawler";
 
 const secuenciarConDelay = (accion1, accion2, delay = 3000) => {
     accion1();
