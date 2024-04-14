@@ -9,7 +9,7 @@ let promesasDePokemons =
 Promise.all(promesasDePokemons)
     .then(pokemones => pokemones.map(pokemon => pokemon.name).sort())
     .then(nombres => nombres.forEach(nombre => console.log(nombre)));
-// Con `Promise.all` pasamos de [Promise<Pokemon>] a Promise<Pokemon[]>
+// Con `Promise.all` pasamos de [Promise<Pokemon>] a Promise<[Pokemon]>
 
 // `Promise.all` no es la única forma que tenemos de combinar promesas. En la práctica de la clase que viene vamos a ver
 // otras, aunque si tienen curiosidad, pueden buscar `Promise.race()`, `Promise.any()` y `Promise.allSettled()`
