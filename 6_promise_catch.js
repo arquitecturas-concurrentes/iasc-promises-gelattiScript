@@ -1,4 +1,4 @@
-const promesaConRespuesta = fetch('https://pokeapi.co/api/v2/pokemon/25');
+const promesaConRespuesta = fetch('https://pokeapi.co/api/v2/pokemon/2500');
 
 promesaConRespuesta
     .then((response) => {
